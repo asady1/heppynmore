@@ -30,19 +30,19 @@ for inFileName in os.listdir(inDirName):
     shutil.copy2("%s/%s" %(inDirName, inFileName), "%s/%s"%(outDirName, inFileName))
     inFile = TFile.Open( "%s/%s" %(outDirName, inFileName), "update" )
     if inFileName.find("500") != -1:
-      xSec = 29370.0 #7475.
+      xSec = 32100.0 #7475., 29370
       genEv = 19542847 #events in DAS
     elif inFileName.find("700") != -1:
-      xSec = 6524.0# 587.1
+      xSec = 6831.0# 587.1, 6524
       genEv = 15011016.0 #events in DAS
     elif inFileName.find("1000") != -1:
-      xSec = 1064.0 #167.0
+      xSec = 1207.0 #167.0, 1064
       genEv = 4963895.0 #events in DAS
     elif inFileName.find("1500") != -1:  
-      xSec = 121.5 #28.25
+      xSec = 119.9 #28.25, 121.5
       genEv = 3848411.0 #events in DAS
     elif inFileName.find("2000") != -1:
-      xSec = 25.42 #8.195
+      xSec = 25.24 #8.195, 25.42
       genEv = 1961774.0 #events in DAS
     else:
       print " Cross section not defined! Exiting..."
